@@ -13,10 +13,15 @@ def test_calcola_hash_formato():
     risultato = calcola_hash(p)
     assert len(risultato) == 64  # SHA-256 è sempre 64 caratteri hex
 
-def test_leggi_righe_conta():
+@pytest.mark.asyncio # questo wrap permette di eseguire questa funzione dentro un event loop
+async def test_leggi_righe_conta():
     p = Path("app.log")
-    assert len(list(leggi_righe(p))) == 100
+    righe = [r async for r in leggi_righe(p)]
+    assert len(righe) == 100
+    # assert len(list(leggi_righe(p))) == 100
 
+
+    
 
 def test_logparse_error():
     context = ["riga mal formata appositamente"]
