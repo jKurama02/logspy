@@ -13,6 +13,28 @@ from dotenv import load_dotenv
 import os
 import aiofiles
 import asyncio
+from datetime import date
+from database import get_session, init_db
+from sqlalchemy import select
+from models import AnalisiLog
+
+
+def salva_analisi(risultato: dict) -> None:
+    new_record = AnalisiLog(
+          file_path=str(risultato["path"]),
+          file_hash=calcola_hash(risultato["path"]),
+          data_analisi=str(date.today()),
+          totale_righe=risultato["totale"],
+          n_errori=risultato["lvl"].get("ERROR", 0),
+          n_warning=risultato["lvl"].get("WARNING", 0),
+          n_info=risultato["lvl"].get("INFO", 0))
+    with get_session() as session:
+        session.add(new_record)
+        session.commit()
+
+
+
+
 
 #to_read = https://read.theaimerge.com/p/final-guide-on-parallel-processing#
 
@@ -107,27 +129,41 @@ async def analizza(path: Path) -> dict:
 # @log_call
 # @timed
 async def main_async(args: list[str]) -> None:
-      parser = argparse.ArgumentParser(description=f'________{APP_NAME}__________')
-      parser.add_argument('--files', required=True, nargs='+', help='file/i da analizzare')
-      my_args = parser.parse_args(args)
+    parser = argparse.ArgumentParser(description=f'________{APP_NAME}__________')
+    parser.add_argument('--files', required=True, nargs='+', help='file/i da analizzare')
+    my_args = parser.parse_args(args)
+    init_db() # e' idempotente
+    paths = [Path(f) for f in my_args.files]
+    for p in paths:
+        if not p.exists():
+            print(f"Errore: file '{p}' non trovato.")
+            sys.exit(1)
+    
+    mapp = dict()   # ["app.log": "ASH", "paa.log":"ASH"]
+    for a in paths:
+        mapp[a] = calcola_hash(a)
+    
+    with get_session() as session :
+        stmt = (select(AnalisiLog.file_hash))
+        result = set(session.scalars(stmt))
+        for p in paths:
+            if mapp.get(p) in result:
+                mapp.pop(p)
 
-      paths = [Path(f) for f in my_args.files]
-      for p in paths:
-          if not p.exists():
-              print(f"Errore: file '{p}' non trovato.")
-              sys.exit(1)
+    paths = [Path(f) for f in mapp.keys()]              
 
-      risultati = await asyncio.gather(*[analizza(p) for p in paths]) #asyncio.gather(...) — prende tutte le coroutine, le avvolge in task, le lancia tutte insieme nell'event loop. Restituisce una coroutine che completa quando tutte sono finite.
-  
-      for r in risultati:                                                                                                                  
-          print(f"\nFile: {r['path']}  |  Righe totali: {r['totale']}")
-          print(f"ERROR    : {r['lvl'].get('ERROR', 0)}")
-          print(f"WARNING  : {r['lvl'].get('WARNING', 0)}")
-          print(f"INFO     : {r['lvl'].get('INFO', 0)}")
-          print(f"\nTop 5 messaggi di errore più frequenti:\n")
-          for x, (msg, cnt) in enumerate(collections.Counter(r['msg']).most_common(5)):
-              print(f"  {x+1}. {msg} (x{cnt})")
-          print(f"SHA-256: {calcola_hash(r['path'])}")
+    risultati = await asyncio.gather(*[analizza(p) for p in paths]) #asyncio.gather(...) — prende tutte le coroutine, le avvolge in task, le lancia tutte insieme nell'event loop. Restituisce una coroutine che completa quando tutte sono finite.
+    
+    for r in risultati:
+        salva_analisi(r);                                                                                                                  
+        print(f"\nFile: {r['path']}  |  Righe totali: {r['totale']}")
+        print(f"ERROR    : {r['lvl'].get('ERROR', 0)}")
+        print(f"WARNING  : {r['lvl'].get('WARNING', 0)}")
+        print(f"INFO     : {r['lvl'].get('INFO', 0)}")
+        print(f"\nTop 5 messaggi di errore più frequenti:\n")
+        for x, (msg, cnt) in enumerate(collections.Counter(r['msg']).most_common(5)):
+            print(f"  {x+1}. {msg} (x{cnt})")
+        print(f"SHA-256: {calcola_hash(r['path'])}")
 
 if __name__ == "__main__":  # Memo: __name__ è una variabile speciale che vale "__main__" solo se il file viene eseguito direttamente; se il file è importato come modulo, assume il nome del file stesso. Usare if __name__ == "__main__": garantisce che il codice interno venga eseguito solo all'avvio diretto, proteggendo il modulo da esecuzioni accidentali durante l'importazione.
     asyncio.run(main_async(sys.argv[1:]))

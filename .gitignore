@@ -3,3 +3,11 @@
 __pycache__/
 .pytest_cache/
 *.pyc
+*.db
+*.log
+*.sqbpro
+sqlalchemy_pratica.py
+setup_db.py
+migrations/
+alembic.ini
+query_pratica.py
