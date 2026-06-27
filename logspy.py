@@ -13,26 +13,6 @@ from dotenv import load_dotenv
 import os
 import aiofiles
 import asyncio
-from datetime import date
-from database import get_session, init_db
-from sqlalchemy import select
-from models import AnalisiLog
-
-
-def salva_analisi(risultato: dict) -> None:
-    new_record = AnalisiLog(
-          file_path=str(risultato["path"]),
-          file_hash=calcola_hash(risultato["path"]),
-          data_analisi=str(date.today()),
-          totale_righe=risultato["totale"],
-          n_errori=risultato["lvl"].get("ERROR", 0),
-          n_warning=risultato["lvl"].get("WARNING", 0),
-          n_info=risultato["lvl"].get("INFO", 0))
-    with get_session() as session:
-        session.add(new_record)
-        session.commit()
-
-
 
 
 
@@ -59,16 +39,16 @@ logging.addLevelName(logging.CRITICAL, f"\x1b[35mCRITICAL\x1b[0m")
 def calcola_hash(path: Path) -> str:
     h = hashlib.sha256()
     with open(path, "rb") as f:
-        while chunk := f.read(8192):
+        while chunk := f.read(8192):   #(walrus) assegna e valuta in una sola mossa
             h.update(chunk)
-    return h.hexdigest()
+    return h.hexdigest()    #restituisce una stringa esadecimale di 64 caratteri 
 
 
 class LogParseError(Exception):
     pass
 # non aggiunge comportamento, eredita dall'implementazione base: memorizza gli argomenti passati in .args e fornisce str che restituisce una rappresentazione leggibile basata su .args.
 
-@dataclass
+@dataclass #genera automaticamente __init__, __repr__ e __eq__ basandosi sulle annotazioni di tipo
 class Log():
     time_stamp: str
     lvl: str
@@ -81,8 +61,8 @@ def log_call(f) -> Callable[..., Any]:
     @functools.wraps(f)
     def wrapper(*args, **kwargs):
         status_c = f(*args)
-        logging.debug(f"{f.__name__} chiamato con args=({args})")
-        logging.debug(f"main ha restituito {status_c}")
+        logging.debug(f"{f.__name__} chiamato con args=({args})")   # logga dopo l'esecuzione
+        logging.debug(f"main ha restituito {status_c}")             # logga dopo l'esecuzione
     return wrapper
 
 def timed(f) -> Callable[..., Any]: # Callable = tipo che rappresenta una funzione/chiamabile
@@ -130,32 +110,17 @@ async def analizza(path: Path) -> dict:
 # @timed
 async def main_async(args: list[str]) -> None:
     parser = argparse.ArgumentParser(description=f'________{APP_NAME}__________')
-    parser.add_argument('--files', required=True, nargs='+', help='file/i da analizzare')
-    my_args = parser.parse_args(args)
-    init_db() # e' idempotente
+    parser.add_argument('--files', required=True, nargs='+', help='file/i da analizzare')  
+    my_args = parser.parse_args(args)   #legge --files e ottiene la lista di path
     paths = [Path(f) for f in my_args.files]
     for p in paths:
         if not p.exists():
             print(f"Errore: file '{p}' non trovato.")
             sys.exit(1)
-    
-    mapp = dict()   # ["app.log": "ASH", "paa.log":"ASH"]
-    for a in paths:
-        mapp[a] = calcola_hash(a)
-    
-    with get_session() as session :
-        stmt = (select(AnalisiLog.file_hash))
-        result = set(session.scalars(stmt))
-        for p in paths:
-            if mapp.get(p) in result:
-                mapp.pop(p)
-
-    paths = [Path(f) for f in mapp.keys()]              
 
     risultati = await asyncio.gather(*[analizza(p) for p in paths]) #asyncio.gather(...) — prende tutte le coroutine, le avvolge in task, le lancia tutte insieme nell'event loop. Restituisce una coroutine che completa quando tutte sono finite.
     
     for r in risultati:
-        salva_analisi(r);                                                                                                                  
         print(f"\nFile: {r['path']}  |  Righe totali: {r['totale']}")
         print(f"ERROR    : {r['lvl'].get('ERROR', 0)}")
         print(f"WARNING  : {r['lvl'].get('WARNING', 0)}")
