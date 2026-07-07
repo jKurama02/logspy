@@ -11,3 +11,4 @@ setup_db.py
 migrations/
 alembic.ini
 query_pratica.py
+.DS_Store

@@ -146,11 +146,11 @@ async def main_async(args: list[str]) -> None:
     with get_session() as session :
         stmt = (select(AnalisiLog.file_hash))
         result = set(session.scalars(stmt))
-        for p in paths:
+        for p in paths:                         
             if mapp.get(p) in result:
                 mapp.pop(p)
 
-    paths = [Path(f) for f in mapp.keys()]              
+    paths = [Path(f) for f in mapp.keys()]    # sovrascrive paths 
 
     risultati = await asyncio.gather(*[analizza(p) for p in paths]) #asyncio.gather(...) — prende tutte le coroutine, le avvolge in task, le lancia tutte insieme nell'event loop. Restituisce una coroutine che completa quando tutte sono finite.
     
