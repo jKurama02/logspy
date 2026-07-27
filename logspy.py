@@ -1,22 +1,19 @@
-import functools 
+import functools
 import sys
 import argparse
-import collections 
+import collections
 from pathlib import Path
 import time
-from dataclasses import dataclass 
-from collections.abc import  AsyncGenerator
-import hashlib
 import logging
 from typing import Callable, Any
 from dotenv import load_dotenv
 import os
-import aiofiles
 import asyncio
 from datetime import date
 from database import get_session, init_db
 from sqlalchemy import select
 from models import AnalisiLog
+from services import analizza, calcola_hash
 
 
 def salva_analisi(risultato: dict) -> None:
@@ -56,27 +53,6 @@ logging.addLevelName(logging.ERROR, f"\x1b[31mERROR\x1b[0m")
 logging.addLevelName(logging.CRITICAL, f"\x1b[35mCRITICAL\x1b[0m")
 
 
-def calcola_hash(path: Path) -> str:
-    h = hashlib.sha256()
-    with open(path, "rb") as f:
-        while chunk := f.read(8192):
-            h.update(chunk)
-    return h.hexdigest()
-
-
-class LogParseError(Exception):
-    pass
-# non aggiunge comportamento, eredita dall'implementazione base: memorizza gli argomenti passati in .args e fornisce str che restituisce una rappresentazione leggibile basata su .args.
-
-@dataclass
-class Log():
-    time_stamp: str
-    lvl: str
-    source: str
-    msg: str
-    def __str__(self):
-        return(self.time_stamp + self.lvl + self.source + self.msg)
-    
 def log_call(f) -> Callable[..., Any]:
     @functools.wraps(f)
     def wrapper(*args, **kwargs):
@@ -95,35 +71,6 @@ def timed(f) -> Callable[..., Any]: # Callable = tipo che rappresenta una funzio
         logging.debug(f"--->Esco dal {f.__name__}")
         logging.debug(f"Tempo: {end_t-start:.2f} sec")
     return wrapper
-
-
-async def leggi_righe(path: Path) -> AsyncGenerator[str, None]:
-    async with aiofiles.open(path, "r") as file:      #with = Context managers
-        async for riga in file:
-            yield riga
-
-
-async def analizza(path: Path) -> dict:
-    d_lvl: dict[str, int] = {}
-    d_msg: dict[str, int] = {}
-    c = 0
-
-    async for l in leggi_righe(path):  #che internamente fa await a ogni riga
-        c += 1
-        s = l.split()
-        try:
-            if len(s) < 6:
-                raise LogParseError(f"Riga malformata: '{l.strip()}'")
-            gg = " ".join(s[5:])
-            log = Log(f"{s[0]}:{s[1]}", s[2], s[3], gg)
-            d_lvl[log.lvl] = d_lvl.get(log.lvl, 0) + 1
-            if log.lvl == "ERROR":
-                d_msg[log.msg] = d_msg.get(log.msg, 0) + 1
-        except LogParseError as e:
-            logging.warning(e)
-
-    return {"path": path, "totale": c, "lvl": d_lvl, "msg": d_msg}
-
 
 
 # @log_call

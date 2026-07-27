@@ -12,3 +12,5 @@ migrations/
 alembic.ini
 query_pratica.py
 .DS_Store
+.claude
+V5_FASTAPI_PIANO.txt

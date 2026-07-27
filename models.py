@@ -1,5 +1,7 @@
+import time
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
-from sqlalchemy import String, Integer
+from sqlalchemy import String, Integer, DateTime
+from datetime import datetime, timezone
 
 class Base(DeclarativeBase):
     pass
@@ -19,3 +21,15 @@ class AnalisiLog(Base):
     def __repr__(self):
         return f"AnalisiLog(file={self.file_path}, errori={self.n_errori}, data={self.data_analisi})"
 
+
+class User(Base):
+    __tablename__ = "users"
+
+    id:              Mapped[int]      = mapped_column(primary_key=True)
+    username:        Mapped[str]      = mapped_column(String(50), unique=True, index=True)
+    email:           Mapped[str]      = mapped_column(String, nullable=False, index=True)
+    hashed_password: Mapped[str]      = mapped_column(String, nullable=False)
+    created_at:      Mapped[datetime] = mapped_column(default=lambda:datetime.now(timezone.utc))
+
+    def __repr__(self):
+        return f"User(id={self.id}, username={self.username})"
