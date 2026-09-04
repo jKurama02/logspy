@@ -7,7 +7,7 @@ class Settings(BaseSettings):     # la usi al posto delle costanti hardcodate
     app_name: str = "LogSpy"
     log_level: str = "INFO"
     database_url: str = "sqlite:///./logspy.db"
-    secret_key: str
+    secret_key: str 
     access_token_expire_minutes: int = 60
     max_upload_mb: int = 20
 

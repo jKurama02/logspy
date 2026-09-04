@@ -1,4 +1,5 @@
 from logspy import *
+from services.analizza import *
 from pathlib import Path
 import pytest
 
@@ -19,9 +20,6 @@ async def test_leggi_righe_conta():
     righe = [r async for r in leggi_righe(p)]
     assert len(righe) == 100
     # assert len(list(leggi_righe(p))) == 100
-
-
-    
 
 def test_logparse_error():
     context = ["riga mal formata appositamente"]

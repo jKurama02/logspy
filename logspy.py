@@ -14,6 +14,8 @@ from database import get_session, init_db
 from sqlalchemy import select
 from models import AnalisiLog
 from services import analizza, calcola_hash
+from tabulate import tabulate
+
 
 
 def salva_analisi(risultato: dict) -> None:
@@ -33,15 +35,13 @@ def salva_analisi(risultato: dict) -> None:
 
 
 
-#to_read = https://read.theaimerge.com/p/final-guide-on-parallel-processing#
-
 
 load_dotenv()
 LOG_LEVEL = os.getenv('LOG_LEVEL', 'WARNING')
 APP_NAME = os.getenv('APP_NAME', 'LogSpy')
 
 logging.basicConfig(
-    level=getattr(logging, LOG_LEVEL), # vai nel modulo logging, cerca l'attributo che ha il nome scritto nella stringa LOG_LEVEL e dammi il suo valore 10/20/30/40/50
+    level=getattr(logging, LOG_LEVEL), 
     format="%(asctime)s [%(levelname)s] %(message)s"
   )
 
@@ -77,7 +77,7 @@ def timed(f) -> Callable[..., Any]: # Callable = tipo che rappresenta una funzio
 # @timed
 async def main_async(args: list[str]) -> None:
     parser = argparse.ArgumentParser(description=f'________{APP_NAME}__________')
-    parser.add_argument('--files', required=True, nargs='+', help='file/i da analizzare')
+    parser.add_argument('--files', required=True, nargs='+', help='file da analizzare')
     my_args = parser.parse_args(args)
     init_db() # e' idempotente
     paths = [Path(f) for f in my_args.files]
@@ -90,23 +90,24 @@ async def main_async(args: list[str]) -> None:
     for a in paths:
         mapp[a] = calcola_hash(a)
     
-    with get_session() as session :
+    #pulizia del dict  mapp  da file gia' analizzati (if presente nel db , rimuovi dal dict mapp)
+    with get_session() as session :           
         stmt = (select(AnalisiLog.file_hash))
         result = set(session.scalars(stmt))
         for p in paths:                         
-            if mapp.get(p) in result:
+            if mapp.get(p) in result: 
                 mapp.pop(p)
 
     paths = [Path(f) for f in mapp.keys()]    # sovrascrive paths 
 
-    risultati = await asyncio.gather(*[analizza(p) for p in paths]) #asyncio.gather(...) — prende tutte le coroutine, le avvolge in task, le lancia tutte insieme nell'event loop. Restituisce una coroutine che completa quando tutte sono finite.
+    risultati = await asyncio.gather(*[analizza(p) for p in paths]) #asyncio.gather(...) — prende tutte le coroutine, le avvolge in task, le lancia tutte insieme nell'event loop. Restituisce una coroutine che completa quando tutte le task sono finite.
     
     for r in risultati:
         salva_analisi(r);                                                                                                                  
-        print(f"\nFile: {r['path']}  |  Righe totali: {r['totale']}")
-        print(f"ERROR    : {r['lvl'].get('ERROR', 0)}")
-        print(f"WARNING  : {r['lvl'].get('WARNING', 0)}")
-        print(f"INFO     : {r['lvl'].get('INFO', 0)}")
+        print(f"\nFile: {r['path']}  |  Righe totali: {r['totale']}\n")
+
+        table = [["ERROR", r['lvl'].get('ERROR', 0)],["INFO", r['lvl'].get('INFO', 0)],["WARNING",  r['lvl'].get('WARNING', 0)]]
+        print (tabulate(table,headers=["Level","Times"]))
         print(f"\nTop 5 messaggi di errore più frequenti:\n")
         for x, (msg, cnt) in enumerate(collections.Counter(r['msg']).most_common(5)):
             print(f"  {x+1}. {msg} (x{cnt})")

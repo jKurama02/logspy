@@ -18,12 +18,312 @@
 [2026-05-25 17:21:08] WARNING [API_HANDLER] - Dati sincronizzati correttamente.
 [2026-05-25 17:22:08] WARNING [AUTH] - Timeout durante l'operazione.
 [2026-05-25 17:23:08] DEBUG   [FILE_SYSTEM] - Inizializzazione sottosistema completata.
-[2026-05-25 17:24:08] DEBUG   [CACHE_MANAGER] - Tentativo di accesso fallito.
+[2026-05-25 17:24:08]    [CACHE_MANAGER] - Tentativo di accesso fallito.
 [2026-05-25 17:25:08] WARNING [AUTH] - Buffer di memoria liberato.
 [2026-05-25 17:26:08] INFO    [CACHE_MANAGER] - Buffer di memoria liberato.
 [2026-05-25 17:27:08] WARNING [FILE_SYSTEM] - Connessione al database stabilita.
 [2026-05-25 17:28:08] DEBUG   [API_HANDLER] - Buffer di memoria liberato.
 [2026-05-25 17:29:08] DEBUG   [FILE_SYSTEM] - Richiesta HTTP ricevuta.
+[2026-05-25 17:04:08] DEBUG   [CACHE_MANAGER] - Timeout durante l'operazione.
+[2026-05-25 17:05:08] ERROR   [API_HANDLER] - Tentativo di accesso fallito.
+[2026-05-25 17:06:08] ERROR   [DB_CONN] - Inizializzazione sottosistema completata.
+[2026-05-25 17:07:08] ERROR   [AUTH] - Richiesta HTTP ricevuta.
+[2026-05-25 17:08:08] DEBUG   [AUTH] - Dati sincronizzati correttamente.
+[2026-05-25 17:09:08] ERROR   [AUTH] - Connessione al database stabilita.
+[2026-05-25 17:10:08] DEBUG   [DB_CONN] - Dati sincronizzati correttamente.
+[2026-05-25 17:11:08] WARNING [FILE_SYSTEM] - Timeout durante l'operazione.
+[2026-05-25 17:12:08] ERROR   [FILE_SYSTEM] - Parametro di configurazione mancante.
+[2026-05-25 17:13:08] WARNING [DB_CONN] - Inizializzazione sottosistema completata.
+[2026-05-25 17:14:08] DEBUG   [CACHE_MANAGER] - Dati sincronizzati correttamente.
+[2026-05-25 17:15:08] DEBUG   [FILE_SYSTEM] - Buffer di memoria liberato.
+[2026-05-25 17:16:08] INFO    [FILE_SYSTEM] - Timeout durante l'operazione.
+[2026-05-25 17:17:08] INFO    [FILE_SYSTEM] - Connessione al database stabilita.
+[2026-05-25 17:18:08] WARNING [DB_CONN] - Inizializzazione sottosistema completata.
+[2026-05-25 17:19:08] ERROR   [CACHE_MANAGER] - Connessione al database stabilita.
+[2026-05-25 17:20:08] INFO    [AUTH] - Connessione al database stabilita.
+[2026-05-25 17:21:08] WARNING [API_HANDLER] - Dati sincronizzati correttamente.
+[2026-05-25 17:22:08] WARNING [AUTH] - Timeout durante l'operazione.
+[2026-05-25 17:23:08] DEBUG   [FILE_SYSTEM] - Inizializzazione sottosistema completata.
+[2026-05-25 17:24:08]    [CACHE_MANAGER] - Tentativo di accesso fallito.
+[2026-05-25 17:25:08] WARNING [AUTH] - Buffer di memoria liberato.
+[2026-05-25 17:26:08] INFO    [CACHE_MANAGER] - Buffer di memoria liberato.
+[2026-05-25 17:27:08] WARNING [FILE_SYSTEM] - Connessione al database stabilita.
+[2026-05-25 17:28:08] DEBUG   [API_HANDLER] - Buffer di memoria liberato.
+[2026-05-25 17:29:08] DEBUG   [FILE_SYSTEM] - Richiesta HTTP ricevuta.
+[2026-05-25 17:30:08] ERROR   [FILE_SYSTEM] - Connessione al database stabilita.
+[2026-05-25 17:31:08] INFO    [AUTH] - Parametro di configurazione mancante.
+[2026-05-25 17:32:08] ERROR   [FILE_SYSTEM] - Richiesta HTTP ricevuta.
+[2026-05-25 17:33:08] WARNING [API_HANDLER] - Dati sincronizzati correttamente.
+[2026-05-25 17:34:08] WARNING [DB_CONN] - Tentativo di accesso fallito.
+[2026-05-25 17:35:08] INFO    [FILE_SYSTEM] - Tentativo di accesso fallito.
+[2026-05-25 17:36:08] ERROR   [FILE_SYSTEM] - Connessione al database stabilita.
+[2026-05-25 17:37:08] ERROR   [CACHE_MANAGER] - Parametro di configurazione mancante.
+[2026-05-25 17:38:08] ERROR   [CACHE_MANAGER] - Buffer di memoria liberato.
+[2026-05-25 17:39:08] DEBUG   [CACHE_MANAGER] - Dati sincronizzati correttamente.
+[2026-05-25 17:40:08] DEBUG   [FILE_SYSTEM] - Parametro di configurazione mancante.
+[2026-05-25 17:41:08] DEBUG   [AUTH] - Buffer di memoria liberato.
+[2026-05-25 17:42:08] INFO    [FILE_SYSTEM] - Connessione al database stabilita.
+[2026-05-25 17:43:08] ERROR   [DB_CONN] - Richiesta HTTP ricevuta.
+[2026-05-25 17:44:08] DEBUG   [DB_CONN] - Timeout durante l'operazione.
+[2026-05-25 17:45:08] INFO    [API_HANDLER] - Inizializzazione sottosistema completata.
+[2026-05-25 17:46:08] ERROR   [CACHE_MANAGER] - Timeout durante l'operazione.
+[2026-05-25 17:47:08] INFO    [DB_CONN] - Richiesta HTTP ricevuta.
+[2026-05-25 17:48:08] DEBUG   [DB_CONN] - Parametro di configurazione mancante.
+[2026-05-25 17:49:08] INFO    [CACHE_MANAGER] - Connessione al database stabilita.
+[2026-05-25 17:50:08] INFO    [DB_CONN] - 
+[2026-05-25 17:51:08] INFO    [DB_CONN] - Tentativo di accesso fallito.
+[2026-05-25 17:52:08] ERROR   [DB_CONN] - Buffer di memoria liberato.
+[2026-05-25 17:53:08] WARNING [AUTH] - Richiesta HTTP ricevuta.
+[2026-05-25 17:54:08] DEBUG   [FILE_SYSTEM] - Dati sincronizzati correttamente.
+[2026-05-25 17:55:08] WARNING [API_HANDLER] 
+[2026-05-25 17:56:08] INFO    [DB_CONN] - Inizializzazione sottosistema completata.
+[2026-05-25 17:57:08] ERROR   [DB_CONN] - Tentativo di accesso fallito.
+[2026-05-25 17:58:08] ERROR   [CACHE_MANAGER] - Inizializzazione sottosistema completata.
+[2026-05-25 17:59:08] WARNING [AUTH] - Tentativo di accesso fallito.
+[2026-05-25 18:00:08] WARNING [CACHE_MANAGER] - Dati sincronizzati correttamente.
+[2026-05-25 18:01:08] INFO    [AUTH] - Dati sincronizzati correttamente.
+[2026-05-25 18:02:08] ERROR   [API_HANDLER] - Richiesta HTTP ricevuta.
+[2026-05-25 18:03:08] INFO    [API_HANDLER] - Connessione al database stabilita.
+[2026-05-25 18:04:08] WARNING [CACHE_MANAGER] - Dati sincronizzati correttamente.
+[2026-05-25 18:05:08] WARNING [API_HANDLER] - Tentativo di accesso fallito.
+[2026-05-25 18:06:08] WARNING [AUTH] - Inizializzazione sottosistema completata.
+[2026-05-25 18:07:08] WARNING [FILE_SYSTEM] - Inizializzazione sottosistema completata.
+[2026-05-25 18:08:08] DEBUG   [AUTH] - Tentativo di accesso fallito.
+[2026-05-25 18:09:08] ERROR   [AUTH] - Buffer di memoria liberato.
+[2026-05-25 18:10:08] ERROR   [AUTH] - Dati sincronizzati correttamente.
+[2026-05-25 18:11:08] INFO    [AUTH] - Parametro di configurazione mancante.
+[2026-05-25 18:12:08] DEBUG   [AUTH] - Richiesta HTTP ricevuta.
+[2026-05-25 18:13:08] DEBUG   [FILE_SYSTEM] - Buffer di memoria liberato.
+[2026-05-25 18:14:08] INFO    [CACHE_MANAGER] - Dati sincronizzati correttamente.
+[2026-05-25 18:15:08] INFO    [FILE_SYSTEM] - Richiesta HTTP ricevuta.
+[2026-05-25 18:16:08] ERROR   [DB_CONN] - Dati sincronizzati correttamente.
+[2026-05-25 18:17:08] ERROR   [API_HANDLER] - Richiesta HTTP ricevuta.
+[2026-05-25 18:18:08] WARNING [API_HANDLER] - Richiesta HTTP ricevuta.
+[2026-05-25 18:19:08] INFO    [CACHE_MANAGER] - Inizializzazione sottosistema completata.
+[2026-05-25 18:20:08] WARNING [FILE_SYSTEM] - Richiesta HTTP ricevuta.
+[2026-05-25 18:21:08] INFO    [CACHE_MANAGER] - Timeout durante l'operazione.
+[2026-05-25 18:22:08] ERROR   [API_HANDLER] - Connessione al database stabilita.
+[2026-05-25 18:23:08] ERROR   [DB_CONN] - Buffer di memoria liberato.
+[2026-05-25 18:24:08] ERROR   [CACHE_MANAGER] - Buffer di memoria liberato.
+[2026-05-25 18:25:08] WARNING [DB_CONN] - Parametro di configurazione mancante.
+[2026-05-25 18:26:08] ERROR   [AUTH] - Tentativo di accesso fallito.
+[2026-05-25 18:27:08] DEBUG   [DB_CONN] - Timeout durante l'operazione.
+[2026-05-25 18:28:08] WARNING [API_HANDLER] - Timeout durante l'operazione.
+[2026-05-25 18:29:08] WARNING [FILE_SYSTEM] - Dati sincronizzati correttamente.
+[2026-05-25 18:30:08] ERROR   [FILE_SYSTEM] - Tentativo di accesso fallito.
+[2026-05-25 18:31:08] ERROR   [AUTH] - Buffer di memoria liberato.
+[2026-05-25 18:32:08] WARNING [AUTH] - Inizializzazione sottosistema completata.
+[2026-05-25 18:33:08] ERROR   [FILE_SYSTEM] - Timeout durante l'operazione.
+[2026-05-25 18:34:08] ERROR   [API_HANDLER] - Parametro di configurazione mancante.
+[2026-05-25 18:35:08] DEBUG   [AUTH] - Richiesta HTTP ricevuta.
+[2026-05-25 18:36:08] WARNING [API_HANDLER] - Buffer di memoria liberato.
+[2026-05-25 18:37:08] WARNING [API_HANDLER] - Parametro di configurazione mancante.
+[2026-05-25 18:38:08] DEBUG   [FILE_SYSTEM] - Timeout durante l'operazione.
+[2026-05-25 18:39:08] INFO    [FILE_SYSTEM] - Richiesta HTTP ricevuta.
+[2026-05-25 18:40:08] INFO    [FILE_SYSTEM] - Parametro di configurazione mancante.
+[2026-05-25 18:41:08] ERROR   [FILE_SYSTEM] - Tentativo di accesso fallito.
+[2026-05-25 18:42:08] DEBUG   [FILE_SYSTEM] - Tentativo di accesso fallito.
+[2026-05-25 18:43:08] WARNING [CACHE_MANAGER] - Connessione al database stabilita.
+[2026-05-25 17:04:08] DEBUG   [CACHE_MANAGER] - Timeout durante l'operazione.
+[2026-05-25 17:05:08] ERROR   [API_HANDLER] - Tentativo di accesso fallito.
+[2026-05-25 17:06:08] ERROR   [DB_CONN] - Inizializzazione sottosistema completata.
+[2026-05-25 17:07:08] ERROR   [AUTH] - Richiesta HTTP ricevuta.
+[2026-05-25 17:08:08] DEBUG   [AUTH] - Dati sincronizzati correttamente.
+[2026-05-25 17:09:08] ERROR   [AUTH] - Connessione al database stabilita.
+[2026-05-25 17:10:08] DEBUG   [DB_CONN] - Dati sincronizzati correttamente.
+[2026-05-25 17:11:08] WARNING [FILE_SYSTEM] - Timeout durante l'operazione.
+[2026-05-25 17:12:08] ERROR   [FILE_SYSTEM] - Parametro di configurazione mancante.
+[2026-05-25 17:13:08] WARNING [DB_CONN] - Inizializzazione sottosistema completata.
+[2026-05-25 17:14:08] DEBUG   [CACHE_MANAGER] - Dati sincronizzati correttamente.
+[2026-05-25 17:15:08] DEBUG   [FILE_SYSTEM] - Buffer di memoria liberato.
+[2026-05-25 17:16:08] INFO    [FILE_SYSTEM] - Timeout durante l'operazione.
+[2026-05-25 17:17:08] INFO    [FILE_SYSTEM] - Connessione al database stabilita.
+[2026-05-25 17:18:08] WARNING [DB_CONN] - Inizializzazione sottosistema completata.
+[2026-05-25 17:19:08] ERROR   [CACHE_MANAGER] - Connessione al database stabilita.
+[2026-05-25 17:20:08] INFO    [AUTH] - Connessione al database stabilita.
+[2026-05-25 17:21:08] WARNING [API_HANDLER] - Dati sincronizzati correttamente.
+[2026-05-25 17:22:08] WARNING [AUTH] - Timeout durante l'operazione.
+[2026-05-25 17:23:08] DEBUG   [FILE_SYSTEM] - Inizializzazione sottosistema completata.
+[2026-05-25 17:24:08]    [CACHE_MANAGER] - Tentativo di accesso fallito.
+[2026-05-25 17:25:08] WARNING [AUTH] - Buffer di memoria liberato.
+[2026-05-25 17:26:08] INFO    [CACHE_MANAGER] - Buffer di memoria liberato.
+[2026-05-25 17:27:08] WARNING [FILE_SYSTEM] - Connessione al database stabilita.
+[2026-05-25 17:28:08] DEBUG   [API_HANDLER] - Buffer di memoria liberato.
+[2026-05-25 17:29:08] DEBUG   [FILE_SYSTEM] - Richiesta HTTP ricevuta.
+[2026-05-25 17:30:08] ERROR   [FILE_SYSTEM] - Connessione al database stabilita.
+[2026-05-25 17:31:08] INFO    [AUTH] - Parametro di configurazione mancante.
+[2026-05-25 17:32:08] ERROR   [FILE_SYSTEM] - Richiesta HTTP ricevuta.
+[2026-05-25 17:33:08] WARNING [API_HANDLER] - Dati sincronizzati correttamente.
+[2026-05-25 17:34:08] WARNING [DB_CONN] - Tentativo di accesso fallito.
+[2026-05-25 17:35:08] INFO    [FILE_SYSTEM] - Tentativo di accesso fallito.
+[2026-05-25 17:36:08] ERROR   [FILE_SYSTEM] - Connessione al database stabilita.
+[2026-05-25 17:37:08] ERROR   [CACHE_MANAGER] - Parametro di configurazione mancante.
+[2026-05-25 17:38:08] ERROR   [CACHE_MANAGER] - Buffer di memoria liberato.
+[2026-05-25 17:39:08] DEBUG   [CACHE_MANAGER] - Dati sincronizzati correttamente.
+[2026-05-25 17:40:08] DEBUG   [FILE_SYSTEM] - Parametro di configurazione mancante.
+[2026-05-25 17:41:08] DEBUG   [AUTH] - Buffer di memoria liberato.
+[2026-05-25 17:42:08] INFO    [FILE_SYSTEM] - Connessione al database stabilita.
+[2026-05-25 17:43:08] ERROR   [DB_CONN] - Richiesta HTTP ricevuta.
+[2026-05-25 17:44:08] DEBUG   [DB_CONN] - Timeout durante l'operazione.
+[2026-05-25 17:45:08] INFO    [API_HANDLER] - Inizializzazione sottosistema completata.
+[2026-05-25 17:46:08] ERROR   [CACHE_MANAGER] - Timeout durante l'operazione.
+[2026-05-25 17:47:08] INFO    [DB_CONN] - Richiesta HTTP ricevuta.
+[2026-05-25 17:48:08] DEBUG   [DB_CONN] - Parametro di configurazione mancante.
+[2026-05-25 17:49:08] INFO    [CACHE_MANAGER] - Connessione al database stabilita.
+[2026-05-25 17:50:08] INFO    [DB_CONN] - 
+[2026-05-25 17:51:08] INFO    [DB_CONN] - Tentativo di accesso fallito.
+[2026-05-25 17:52:08] ERROR   [DB_CONN] - Buffer di memoria liberato.
+[2026-05-25 17:53:08] WARNING [AUTH] - Richiesta HTTP ricevuta.
+[2026-05-25 17:54:08] DEBUG   [FILE_SYSTEM] - Dati sincronizzati correttamente.
+[2026-05-25 17:55:08] WARNING [API_HANDLER] 
+[2026-05-25 17:56:08] INFO    [DB_CONN] - Inizializzazione sottosistema completata.
+[2026-05-25 17:57:08] ERROR   [DB_CONN] - Tentativo di accesso fallito.
+[2026-05-25 17:58:08] ERROR   [CACHE_MANAGER] - Inizializzazione sottosistema completata.
+[2026-05-25 17:59:08] WARNING [AUTH] - Tentativo di accesso fallito.
+[2026-05-25 18:00:08] WARNING [CACHE_MANAGER] - Dati sincronizzati correttamente.
+[2026-05-25 18:01:08] INFO    [AUTH] - Dati sincronizzati correttamente.
+[2026-05-25 18:02:08] ERROR   [API_HANDLER] - Richiesta HTTP ricevuta.
+[2026-05-25 18:03:08] INFO    [API_HANDLER] - Connessione al database stabilita.
+[2026-05-25 18:04:08] WARNING [CACHE_MANAGER] - Dati sincronizzati correttamente.
+[2026-05-25 18:05:08] WARNING [API_HANDLER] - Tentativo di accesso fallito.
+[2026-05-25 18:06:08] WARNING [AUTH] - Inizializzazione sottosistema completata.
+[2026-05-25 18:07:08] WARNING [FILE_SYSTEM] - Inizializzazione sottosistema completata.
+[2026-05-25 18:08:08] DEBUG   [AUTH] - Tentativo di accesso fallito.
+[2026-05-25 18:09:08] ERROR   [AUTH] - Buffer di memoria liberato.
+[2026-05-25 18:10:08] ERROR   [AUTH] - Dati sincronizzati correttamente.
+[2026-05-25 18:11:08] INFO    [AUTH] - Parametro di configurazione mancante.
+[2026-05-25 18:12:08] DEBUG   [AUTH] - Richiesta HTTP ricevuta.
+[2026-05-25 18:13:08] DEBUG   [FILE_SYSTEM] - Buffer di memoria liberato.
+[2026-05-25 18:14:08] INFO    [CACHE_MANAGER] - Dati sincronizzati correttamente.
+[2026-05-25 18:15:08] INFO    [FILE_SYSTEM] - Richiesta HTTP ricevuta.
+[2026-05-25 18:16:08] ERROR   [DB_CONN] - Dati sincronizzati correttamente.
+[2026-05-25 18:17:08] ERROR   [API_HANDLER] - Richiesta HTTP ricevuta.
+[2026-05-25 18:18:08] WARNING [API_HANDLER] - Richiesta HTTP ricevuta.
+[2026-05-25 18:19:08] INFO    [CACHE_MANAGER] - Inizializzazione sottosistema completata.
+[2026-05-25 18:20:08] WARNING [FILE_SYSTEM] - Richiesta HTTP ricevuta.
+[2026-05-25 18:21:08] INFO    [CACHE_MANAGER] - Timeout durante l'operazione.
+[2026-05-25 18:22:08] ERROR   [API_HANDLER] - Connessione al database stabilita.
+[2026-05-25 18:23:08] ERROR   [DB_CONN] - Buffer di memoria liberato.
+[2026-05-25 18:24:08] ERROR   [CACHE_MANAGER] - Buffer di memoria liberato.
+[2026-05-25 18:25:08] WARNING [DB_CONN] - Parametro di configurazione mancante.
+[2026-05-25 18:26:08] ERROR   [AUTH] - Tentativo di accesso fallito.
+[2026-05-25 18:27:08] DEBUG   [DB_CONN] - Timeout durante l'operazione.
+[2026-05-25 18:28:08] WARNING [API_HANDLER] - Timeout durante l'operazione.
+[2026-05-25 18:29:08] WARNING [FILE_SYSTEM] - Dati sincronizzati correttamente.
+[2026-05-25 18:30:08] ERROR   [FILE_SYSTEM] - Tentativo di accesso fallito.
+[2026-05-25 18:31:08] ERROR   [AUTH] - Buffer di memoria liberato.
+[2026-05-25 18:32:08] WARNING [AUTH] - Inizializzazione sottosistema completata.
+[2026-05-25 18:33:08] ERROR   [FILE_SYSTEM] - Timeout durante l'operazione.
+[2026-05-25 18:34:08] ERROR   [API_HANDLER] - Parametro di configurazione mancante.
+[2026-05-25 18:35:08] DEBUG   [AUTH] - Richiesta HTTP ricevuta.
+[2026-05-25 18:36:08] WARNING [API_HANDLER] - Buffer di memoria liberato.
+[2026-05-25 18:37:08] WARNING [API_HANDLER] - Parametro di configurazione mancante.
+[2026-05-25 18:38:08] DEBUG   [FILE_SYSTEM] - Timeout durante l'operazione.
+[2026-05-25 18:39:08] INFO    [FILE_SYSTEM] - Richiesta HTTP ricevuta.
+[2026-05-25 18:40:08] INFO    [FILE_SYSTEM] - Parametro di configurazione mancante.
+[2026-05-25 18:41:08] ERROR   [FILE_SYSTEM] - Tentativo di accesso fallito.
+[2026-05-25 18:42:08] DEBUG   [FILE_SYSTEM] - Tentativo di accesso fallito.
+[2026-05-25 18:43:08] WARNING [CACHE_MANAGER] - Connessione al database stabilita.
+[2026-05-25 17:04:08] DEBUG   [CACHE_MANAGER] - Timeout durante l'operazione.
+[2026-05-25 17:05:08] ERROR   [API_HANDLER] - Tentativo di accesso fallito.
+[2026-05-25 17:06:08] ERROR   [DB_CONN] - Inizializzazione sottosistema completata.
+[2026-05-25 17:07:08] ERROR   [AUTH] - Richiesta HTTP ricevuta.
+[2026-05-25 17:08:08] DEBUG   [AUTH] - Dati sincronizzati correttamente.
+[2026-05-25 17:09:08] ERROR   [AUTH] - Connessione al database stabilita.
+[2026-05-25 17:10:08] DEBUG   [DB_CONN] - Dati sincronizzati correttamente.
+[2026-05-25 17:11:08] WARNING [FILE_SYSTEM] - Timeout durante l'operazione.
+[2026-05-25 17:12:08] ERROR   [FILE_SYSTEM] - Parametro di configurazione mancante.
+[2026-05-25 17:13:08] WARNING [DB_CONN] - Inizializzazione sottosistema completata.
+[2026-05-25 17:14:08] DEBUG   [CACHE_MANAGER] - Dati sincronizzati correttamente.
+[2026-05-25 17:15:08] DEBUG   [FILE_SYSTEM] - Buffer di memoria liberato.
+[2026-05-25 17:16:08] INFO    [FILE_SYSTEM] - Timeout durante l'operazione.
+[2026-05-25 17:17:08] INFO    [FILE_SYSTEM] - Connessione al database stabilita.
+[2026-05-25 17:18:08] WARNING [DB_CONN] - Inizializzazione sottosistema completata.
+[2026-05-25 17:19:08] ERROR   [CACHE_MANAGER] - Connessione al database stabilita.
+[2026-05-25 17:20:08] INFO    [AUTH] - Connessione al database stabilita.
+[2026-05-25 17:21:08] WARNING [API_HANDLER] - Dati sincronizzati correttamente.
+[2026-05-25 17:22:08] WARNING [AUTH] - Timeout durante l'operazione.
+[2026-05-25 17:23:08] DEBUG   [FILE_SYSTEM] - Inizializzazione sottosistema completata.
+[2026-05-25 17:24:08]    [CACHE_MANAGER] - Tentativo di accesso fallito.
+[2026-05-25 17:25:08] WARNING [AUTH] - Buffer di memoria liberato.
+[2026-05-25 17:26:08] INFO    [CACHE_MANAGER] - Buffer di memoria liberato.
+[2026-05-25 17:27:08] WARNING [FILE_SYSTEM] - Connessione al database stabilita.
+[2026-05-25 17:28:08] DEBUG   [API_HANDLER] - Buffer di memoria liberato.
+[2026-05-25 17:29:08] DEBUG   [FILE_SYSTEM] - Richiesta HTTP ricevuta.
+[2026-05-25 17:30:08] ERROR   [FILE_SYSTEM] - Connessione al database stabilita.
+[2026-05-25 17:31:08] INFO    [AUTH] - Parametro di configurazione mancante.
+[2026-05-25 17:32:08] ERROR   [FILE_SYSTEM] - Richiesta HTTP ricevuta.
+[2026-05-25 17:33:08] WARNING [API_HANDLER] - Dati sincronizzati correttamente.
+[2026-05-25 17:34:08] WARNING [DB_CONN] - Tentativo di accesso fallito.
+[2026-05-25 17:35:08] INFO    [FILE_SYSTEM] - Tentativo di accesso fallito.
+[2026-05-25 17:36:08] ERROR   [FILE_SYSTEM] - Connessione al database stabilita.
+[2026-05-25 17:37:08] ERROR   [CACHE_MANAGER] - Parametro di configurazione mancante.
+[2026-05-25 17:38:08] ERROR   [CACHE_MANAGER] - Buffer di memoria liberato.
+[2026-05-25 17:39:08] DEBUG   [CACHE_MANAGER] - Dati sincronizzati correttamente.
+[2026-05-25 17:40:08] DEBUG   [FILE_SYSTEM] - Parametro di configurazione mancante.
+[2026-05-25 17:41:08] DEBUG   [AUTH] - Buffer di memoria liberato.
+[2026-05-25 17:42:08] INFO    [FILE_SYSTEM] - Connessione al database stabilita.
+[2026-05-25 17:43:08] ERROR   [DB_CONN] - Richiesta HTTP ricevuta.
+[2026-05-25 17:44:08] DEBUG   [DB_CONN] - Timeout durante l'operazione.
+[2026-05-25 17:45:08] INFO    [API_HANDLER] - Inizializzazione sottosistema completata.
+[2026-05-25 17:46:08] ERROR   [CACHE_MANAGER] - Timeout durante l'operazione.
+[2026-05-25 17:47:08] INFO    [DB_CONN] - Richiesta HTTP ricevuta.
+[2026-05-25 17:48:08] DEBUG   [DB_CONN] - Parametro di configurazione mancante.
+[2026-05-25 17:49:08] INFO    [CACHE_MANAGER] - Connessione al database stabilita.
+[2026-05-25 17:50:08] INFO    [DB_CONN] - 
+[2026-05-25 17:51:08] INFO    [DB_CONN] - Tentativo di accesso fallito.
+[2026-05-25 17:52:08] ERROR   [DB_CONN] - Buffer di memoria liberato.
+[2026-05-25 17:53:08] WARNING [AUTH] - Richiesta HTTP ricevuta.
+[2026-05-25 17:54:08] DEBUG   [FILE_SYSTEM] - Dati sincronizzati correttamente.
+[2026-05-25 17:55:08] WARNING [API_HANDLER] 
+[2026-05-25 17:56:08] INFO    [DB_CONN] - Inizializzazione sottosistema completata.
+[2026-05-25 17:57:08] ERROR   [DB_CONN] - Tentativo di accesso fallito.
+[2026-05-25 17:58:08] ERROR   [CACHE_MANAGER] - Inizializzazione sottosistema completata.
+[2026-05-25 17:59:08] WARNING [AUTH] - Tentativo di accesso fallito.
+[2026-05-25 18:00:08] WARNING [CACHE_MANAGER] - Dati sincronizzati correttamente.
+[2026-05-25 18:01:08] INFO    [AUTH] - Dati sincronizzati correttamente.
+[2026-05-25 18:02:08] ERROR   [API_HANDLER] - Richiesta HTTP ricevuta.
+[2026-05-25 18:03:08] INFO    [API_HANDLER] - Connessione al database stabilita.
+[2026-05-25 18:04:08] WARNING [CACHE_MANAGER] - Dati sincronizzati correttamente.
+[2026-05-25 18:05:08] WARNING [API_HANDLER] - Tentativo di accesso fallito.
+[2026-05-25 18:06:08] WARNING [AUTH] - Inizializzazione sottosistema completata.
+[2026-05-25 18:07:08] WARNING [FILE_SYSTEM] - Inizializzazione sottosistema completata.
+[2026-05-25 18:08:08] DEBUG   [AUTH] - Tentativo di accesso fallito.
+[2026-05-25 18:09:08] ERROR   [AUTH] - Buffer di memoria liberato.
+[2026-05-25 18:10:08] ERROR   [AUTH] - Dati sincronizzati correttamente.
+[2026-05-25 18:11:08] INFO    [AUTH] - Parametro di configurazione mancante.
+[2026-05-25 18:12:08] DEBUG   [AUTH] - Richiesta HTTP ricevuta.
+[2026-05-25 18:13:08] DEBUG   [FILE_SYSTEM] - Buffer di memoria liberato.
+[2026-05-25 18:14:08] INFO    [CACHE_MANAGER] - Dati sincronizzati correttamente.
+[2026-05-25 18:15:08] INFO    [FILE_SYSTEM] - Richiesta HTTP ricevuta.
+[2026-05-25 18:16:08] ERROR   [DB_CONN] - Dati sincronizzati correttamente.
+[2026-05-25 18:17:08] ERROR   [API_HANDLER] - Richiesta HTTP ricevuta.
+[2026-05-25 18:18:08] WARNING [API_HANDLER] - Richiesta HTTP ricevuta.
+[2026-05-25 18:19:08] INFO    [CACHE_MANAGER] - Inizializzazione sottosistema completata.
+[2026-05-25 18:20:08] WARNING [FILE_SYSTEM] - Richiesta HTTP ricevuta.
+[2026-05-25 18:21:08] INFO    [CACHE_MANAGER] - Timeout durante l'operazione.
+[2026-05-25 18:22:08] ERROR   [API_HANDLER] - Connessione al database stabilita.
+[2026-05-25 18:23:08] ERROR   [DB_CONN] - Buffer di memoria liberato.
+[2026-05-25 18:24:08] ERROR   [CACHE_MANAGER] - Buffer di memoria liberato.
+[2026-05-25 18:25:08] WARNING [DB_CONN] - Parametro di configurazione mancante.
+[2026-05-25 18:26:08] ERROR   [AUTH] - Tentativo di accesso fallito.
+[2026-05-25 18:27:08] DEBUG   [DB_CONN] - Timeout durante l'operazione.
+[2026-05-25 18:28:08] WARNING [API_HANDLER] - Timeout durante l'operazione.
+[2026-05-25 18:29:08] WARNING [FILE_SYSTEM] - Dati sincronizzati correttamente.
+[2026-05-25 18:30:08] ERROR   [FILE_SYSTEM] - Tentativo di accesso fallito.
+[2026-05-25 18:31:08] ERROR   [AUTH] - Buffer di memoria liberato.
+[2026-05-25 18:32:08] WARNING [AUTH] - Inizializzazione sottosistema completata.
+[2026-05-25 18:33:08] ERROR   [FILE_SYSTEM] - Timeout durante l'operazione.
+[2026-05-25 18:34:08] ERROR   [API_HANDLER] - Parametro di configurazione mancante.
+[2026-05-25 18:35:08] DEBUG   [AUTH] - Richiesta HTTP ricevuta.
+[2026-05-25 18:36:08] WARNING [API_HANDLER] - Buffer di memoria liberato.
+[2026-05-25 18:37:08] WARNING [API_HANDLER] - Parametro di configurazione mancante.
+[2026-05-25 18:38:08] DEBUG   [FILE_SYSTEM] - Timeout durante l'operazione.
+[2026-05-25 18:39:08] INFO    [FILE_SYSTEM] - Richiesta HTTP ricevuta.
+[2026-05-25 18:40:08] INFO    [FILE_SYSTEM] - Parametro di configurazione mancante.
+[2026-05-25 18:41:08] ERROR   [FILE_SYSTEM] - Tentativo di accesso fallito.
+[2026-05-25 18:42:08] DEBUG   [FILE_SYSTEM] - Tentativo di accesso fallito.
+[2026-05-25 18:43:08] WARNING [CACHE_MANAGER] - Connessione al database stabilita.
 [2026-05-25 17:30:08] ERROR   [FILE_SYSTEM] - Connessione al database stabilita.
 [2026-05-25 17:31:08] INFO    [AUTH] - Parametro di configurazione mancante.
 [2026-05-25 17:32:08] ERROR   [FILE_SYSTEM] - Richiesta HTTP ricevuta.
